@@ -9,5 +9,19 @@ app.get('/', function (req, res) {
 })
 
 
-
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 app.listen(PORT, () => console.log(`We chopping it up on PORT ${PORT}`));
+// IT'S A SERVER!
+
+//API ROUTES
+    //CRUD :)
+        //CREATE - POST RESERVATIONS
+            //FS
+        //READ - GET RESERVATION OBJECTS
+        //UPDATE
+        //DELETE
+//HTML ROUTES
+    //GET, RES.SENDFILE TABLES
+    //GET, RES.SENDFILE RESERVATIONS
