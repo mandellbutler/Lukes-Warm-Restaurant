@@ -14,6 +14,14 @@ app.use(express.static("public"));
     //CRUD :)
         //CREATE - POST RESERVATIONS
             //FS
+
+
+        //READ - GET RESERVATION OBJECTS
+        //UPDATE
+        //DELETE
+//HTML ROUTES
+    //GET, RES.SENDFILE TABLES
+    //GET, RES.SENDFILE RESERVATIONS
 app.get('/tables', (req, res) => {
     res.sendFile(path.join(__dirname, "/public/tables.html"));
 });
@@ -22,17 +30,9 @@ app.get('/reservations', (req, res) => {
     res.sendFile(path.join(__dirname, "/public/reservations.html"));
 });
 
-        //READ - GET RESERVATION OBJECTS
-        //UPDATE
-        //DELETE
-//HTML ROUTES
-    //GET, RES.SENDFILE TABLES
-    //GET, RES.SENDFILE RESERVATIONS
-
 app.get('/', function (req, res) {
     res.send('hello world')
 })
-
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/index.html"));

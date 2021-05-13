@@ -24,6 +24,7 @@ function generateRes() {
 }
 
     // FETCH DATA
+
         //
     
     //PLACE RES OBJECT INTO JSON
