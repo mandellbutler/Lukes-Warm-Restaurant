@@ -24,7 +24,17 @@ function generateRes() {
 }
 
     // FETCH DATA
+
         //
+function saveRes(resObj) {
+    fetch('api/reservations', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(note)
+    })
+}
     
     //PLACE RES OBJECT INTO JSON
 

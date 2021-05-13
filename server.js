@@ -26,14 +26,16 @@ app.get('/tables', (req, res) => {
     res.sendFile(path.join(__dirname, "/public/tables.html"));
 });
 
-app.get('/reservations', (req, res) => {
-    res.sendFile(path.join(__dirname, "/public/reservations.html"));
-});
 
 
 app.get("/api/reservations", (req, res) => {
     res.sendFile(path.join(__dirname, "/db/reservations.json"));
 });
+
+app.post("/api/reservations", (req, res) => {
+    const newResObj = req.body;
+    res.send(newResObj)
+})
 
 app.get("/api/waitlist", (req, res) => {
     res.sendFile(path.join(__dirname, "/db/waitlist.json"));
