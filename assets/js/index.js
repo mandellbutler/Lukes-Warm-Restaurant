@@ -5,16 +5,22 @@
     //DIVS FOR HTML LISTS
 
 //OBJECT CONSTRUCTOR FOR RESERVATIONS
+function Res(name, phone, email, id) {
+    this.name = name;
+    this.phone = phone;
+    this.email = email;
+    this.id = id;
+}
 
 
 //FUCNTIONS==========
+//RES ARRAY
+let resArray = []
     //CREATE RES OBJECT
         //FORM USER INPUT, INTO OBJECT PROPERTIES
-let newReservation = {
-    name: userName,
-    phone: userPhone,
-    email: userEmail,
-    ID: id
+function generateRes() {
+    let newRes = new Res("formName", "formPhone", "formEmail", "formID");
+    resArray.push(newRes);
 }
 
     // FETCH DATA
