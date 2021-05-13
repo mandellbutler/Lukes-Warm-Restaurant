@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
         //READ - GET RESERVATION OBJECTS
         //UPDATE
-        //DELETE
+        
 //HTML ROUTES
     //GET, RES.SENDFILE TABLES
     //GET, RES.SENDFILE RESERVATIONS
@@ -26,14 +26,32 @@ app.get('/tables', (req, res) => {
     res.sendFile(path.join(__dirname, "/public/tables.html"));
 });
 
-app.get('/reservations', (req, res) => {
-    res.sendFile(path.join(__dirname, "/public/reservations.html"));
+
+
+app.get("/api/reservations", (req, res) => {
+    res.sendFile(path.join(__dirname, "/db/reservations.json"));
 });
 
-app.get('/', function (req, res) {
-    res.send('hello world')
+app.post("/api/reservations", (req, res) => {
+    const newResObj = req.body;
+    res.send(newResObj)
 })
 
+app.get("/api/waitlist", (req, res) => {
+    res.sendFile(path.join(__dirname, "/db/waitlist.json"));
+});
+//========read by id
+app.get("/api/reservations/:id", (req, res) => {
+    res.json(reservations[req.params.id]);
+});
+
+//DELETE
+// //=======delete by id
+app.delete("api/reservations/:id", (req, res) => {
+    res.json(reservations[req.params.id]);
+});
+
+//===========
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/index.html"));
 });
