@@ -13,10 +13,10 @@
     <title>Luke's Warm Restaurant</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="mb-4">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Luke's</a>
+          <a class="navbar-brand mb-0 home-button" href="#">Luke's</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -29,12 +29,15 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active home-button" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Reservations</a>
+                <a class="nav-link reservation-button" href="#">Reservations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tables-button" href="#">Availability</a>
               </li>
             </ul>
           </div>
@@ -42,9 +45,27 @@
       </nav>
     </header>
 
-
-    <!-- reservations here -->
-
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-body">
+              <h2 class="card-title mb-4">Welcome to Luke's Warm Restaurant</h2>
+              <a href="#" class="btn btn-primary reservation-button">Make A Reservation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row reservations">
+          <div class="card col-sm-12">
+            <div class="card-body">
+              <h5 class="card-title">Reservation name</h5>
+              <h6 class="card-subtitle">Reserved</h6>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
 
     <script src="index.js"></script>
     <script
